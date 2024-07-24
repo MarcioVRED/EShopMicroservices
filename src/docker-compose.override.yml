@@ -89,3 +89,8 @@ services:
     volumes:
       - /Microsoft/UserSecrets:/APP/Microsoft/usersecrets:ro
       - /ASP.NET/Https:/APP/ASPNET/https:ro
+      - "6060:8080"
+      - "6061:8081"
+    volumes:
+      - /Microsoft/UserSecrets:/APP/Microsoft/usersecrets:ro
+      - /ASP.NET/Https:/APP/ASPNET/https:ro 

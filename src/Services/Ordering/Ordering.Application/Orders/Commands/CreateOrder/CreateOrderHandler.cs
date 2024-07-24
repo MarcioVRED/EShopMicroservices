@@ -35,7 +35,7 @@ public class CreateOrderHandler(IApplicationDbContext dbContext) : ICommandHandl
                         billingAddress: billingAddress,
                         payment: Payment.Of(orderDto.Payment.CardName, orderDto.Payment.CardNumber,
                         orderDto.Payment.Expiration, orderDto.Payment.Cvv, orderDto.Payment.PaymentMethod));
-        foreach (var orderItemDto in orderDto.OrderItems)
+        foreach (var orderItemDto in orderDto.OrdersItems)
         {
             newOrder.Add(ProductId.Of(orderItemDto.ProductId), orderItemDto.Quantity, orderItemDto.Price);
         }

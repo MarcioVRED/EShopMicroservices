@@ -292,7 +292,7 @@ namespace Ordering.Infrastructure.Data.Migrations
             modelBuilder.Entity("Ordering.Domain.Models.OrderItem", b =>
                 {
                     b.HasOne("Ordering.Domain.Models.Order", null)
-                        .WithMany("OrderItems")
+                        .WithMany("OrdersItems")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -306,7 +306,7 @@ namespace Ordering.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Ordering.Domain.Models.Order", b =>
                 {
-                    b.Navigation("OrderItems");
+                    b.Navigation("OrdersItems");
                 });
 #pragma warning restore 612, 618
         }
