@@ -10,10 +10,10 @@ using Ordering.Infrastructure.Data;
 
 #nullable disable
 
-namespace Ordering.Infrastructure.Data.Migrations
+namespace Ordering.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240722163257_InitialCreate")]
+    [Migration("20240804165021_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

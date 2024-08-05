@@ -1,4 +1,6 @@
-﻿namespace Ordering.Domain.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Ordering.Domain.Models;
 
 public class Order : Aggregate<OrderId>
 {
@@ -11,6 +13,8 @@ public class Order : Aggregate<OrderId>
     public Address BillingAddress { get; private set; } = default!;
     public Payment Payment { get; private set; } = default!;
     public OrderStatus Status { get; private set; } = OrderStatus.Pending;
+
+    [Column(TypeName = "decimal(18,2)")]
     public decimal TotalPrice
     {
         get => OrdersItems.Sum(x => x.Price * x.Quantity);

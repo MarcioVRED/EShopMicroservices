@@ -1,4 +1,6 @@
-﻿namespace Ordering.Domain.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Ordering.Domain.Models;
 
 public class OrderItem : Entity<OrderItemId>
 {
@@ -13,5 +15,7 @@ public class OrderItem : Entity<OrderItemId>
     public OrderId OrderId { get; set; } = default!;
     public ProductId ProductId { get; set; } = default!;
     public int Quantity { get; set; } = default!;
+
+    [Column(TypeName = "decimal(18,2)")]
     public decimal Price { get; set; } = default!;
 }

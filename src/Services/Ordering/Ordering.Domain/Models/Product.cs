@@ -1,8 +1,12 @@
-﻿namespace Ordering.Domain.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Ordering.Domain.Models;
 
 public class Product : Entity<ProductId>
 {
     public string Name { get; set; } = default!;
+
+    [Column(TypeName = "decimal(18,2)")]
     public decimal Price { get; set; } = default!;
 
     public static Product Create(ProductId id, string name, decimal price)

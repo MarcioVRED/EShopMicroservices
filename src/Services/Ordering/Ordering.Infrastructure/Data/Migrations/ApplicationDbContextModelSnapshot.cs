@@ -9,7 +9,7 @@ using Ordering.Infrastructure.Data;
 
 #nullable disable
 
-namespace Ordering.Infrastructure.Data.Migrations
+namespace Ordering.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot

@@ -9,7 +9,6 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
         
     }
-
     public DbSet<Customer> Customers => Set<Customer>();
     public DbSet<Product> Products => Set<Product>();
     public DbSet<Order> Orders => Set<Order>();
